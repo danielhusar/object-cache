@@ -1,4 +1,4 @@
-# Object cache
+# Object cache [![Build Status](https://travis-ci.org/danielhusar/object-cache.png)](https://travis-ci.org/danielhusar/object-cache)
 
 > Store and return object from cache
 
