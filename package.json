@@ -1,8 +1,12 @@
 {
-  "name": "",
+  "name": "object-cache",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Cache the object into json files",
+  "keywords": [
+    "object",
+    "json",
+    "cache"
+  ],
   "scripts": {
     "test": "mocha -R spec"
   },

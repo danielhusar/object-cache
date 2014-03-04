@@ -14,7 +14,7 @@ var sampleObj2 = {
   prop: 'val2'
 };
 
-describe('Sunchronous cache tests', function(){
+describe('Synchronous cache tests', function(){
 
   it('It should store data', function () {
     cacheSync.store('sampleObj.json', sampleObj);
