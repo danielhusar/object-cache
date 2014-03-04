@@ -42,8 +42,9 @@ var cache = new Cache();
 var sampleObj = {
     prop: 'val'
 };
-cacheSync.store('sampleObj.json', sampleObj);
-cacheSync.remove('sampleObj.json');
+cache.store('sampleObj.json', sampleObj);
+var file = cache.get('sampleObj.json');
+cache.remove('sampleObj.json');
 
 ```
 
@@ -58,8 +59,8 @@ var sampleObj = {
     prop: 'val'
 };
 
-cache('sampleObj.json', sampleObj, function(){
-  cache('sampleObj.json', function(error, data){
+cache.store('sampleObj.json', sampleObj, function(){
+  cache.get('sampleObj.json', function(error, data){
       console.log(data);
   });
 });
