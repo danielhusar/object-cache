@@ -49,16 +49,18 @@ describe('Asynchronous cache tests', function(){
     });
   });
 
-  it('It should store data using promise', function (done) {
-    cacheAsync.store('sampleObj2.json', sampleObj2).then(function(){
-      cacheAsync.get('sampleObj2.json').then(function(data){
+  it('It should store data using promises', function (done) {
+    cacheAsync.store('sampleObj2.json', sampleObj2)
+      .then(function(){
+        return cacheAsync.get('sampleObj2.json');
+      })
+      .then(function(data){
         data.prop.should.equal('val2');
         done();
       });
-    });
   });
 
-  it('It should remove data using promise', function (done) {
+  it('It should remove data using promises', function (done) {
     cacheAsync.remove('sampleObj2.json').then(function(){
       done();
     });

@@ -40,7 +40,7 @@ Sync:
 ```
 var cache = new Cache();
 var sampleObj = {
-  	prop: 'val'
+    prop: 'val'
 };
 cacheSync.store('sampleObj.json', sampleObj);
 cacheSync.remove('sampleObj.json');
@@ -55,17 +55,17 @@ var cache = new Cache({
 });
 
 var sampleObj = {
-  	prop: 'val'
+    prop: 'val'
 };
 
 cache('sampleObj.json', sampleObj, function(){
-	cache('sampleObj.json', function(error, data){
-    	console.log(data);
-	});
+  cache('sampleObj.json', function(error, data){
+      console.log(data);
+  });
 });
 
 cache.remove('sampleObj.json', function(err, success){
-	console.log(err, success);
+  console.log(err, success);
 });
 
 ```
@@ -78,14 +78,16 @@ var cache = new Cache({
 });
 
 var sampleObj = {
-  	prop: 'val'
+    prop: 'val'
 };
 
-cache.store('sampleObj2.json', sampleObj2).then(function(){
-	cache.get('sampleObj2.json').then(function(data){
-    	console.log(data);
-	});
-});
+cache.store('sampleObj2.json', sampleObj2)
+  .then(function(){
+    return cache.get('sampleObj2.json');
+  })
+  .then(function(data){
+    console.log(data);
+  });
 
 cache.remove('sampleObj2.json').then(function(){
   console.log('done');
