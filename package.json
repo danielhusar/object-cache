@@ -14,7 +14,10 @@
     "type": "git",
     "url": "https://github.com/danielhusar/"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node.extend": "*",
+    "q": "*"
+  },
   "devDependencies": {
     "mocha": "*",
     "should": "*"
