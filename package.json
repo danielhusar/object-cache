@@ -1,6 +1,6 @@
 {
   "name": "object-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cache the object into json files",
   "keywords": [
     "object",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielhusar/"
+    "url": "https://github.com/danielhusar/object-cache"
   },
   "dependencies": {
     "node.extend": "*",
