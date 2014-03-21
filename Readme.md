@@ -1,4 +1,4 @@
-# Object cache [![Build Status](https://travis-ci.org/danielhusar/object-cache.png)](https://travis-ci.org/danielhusar/object-cache)
+# Object cache [![Build Status](https://travis-ci.org/danielhusar/object-cache.svg)](https://travis-ci.org/danielhusar/object-cache)
 
 > Store and return object from cache
 
@@ -26,9 +26,9 @@ params:
 
 ```
 {
-    folder: './cache',
-    async: false,
-    encoding: 'utf8'
+		folder: './cache',
+		async: false,
+		encoding: 'utf8'
 }
 ```
 
@@ -40,7 +40,7 @@ Sync:
 ```
 var cache = new Cache();
 var sampleObj = {
-    prop: 'val'
+		prop: 'val'
 };
 cache.store('sampleObj.json', sampleObj);
 var file = cache.get('sampleObj.json');
@@ -52,21 +52,21 @@ Async with callback:
 
 ```
 var cache = new Cache({
-  async: true
+	async: true
 });
 
 var sampleObj = {
-    prop: 'val'
+		prop: 'val'
 };
 
 cache.store('sampleObj.json', sampleObj, function(){
-  cache.get('sampleObj.json', function(error, data){
-      console.log(data);
-  });
+	cache.get('sampleObj.json', function(error, data){
+			console.log(data);
+	});
 });
 
 cache.remove('sampleObj.json', function(err, success){
-  console.log(err, success);
+	console.log(err, success);
 });
 
 ```
@@ -75,23 +75,23 @@ Async with promises:
 
 ```
 var cache = new Cache({
-  async: true
+	async: true
 });
 
 var sampleObj = {
-    prop: 'val'
+		prop: 'val'
 };
 
 cache.store('sampleObj2.json', sampleObj2)
-  .then(function(){
-    return cache.get('sampleObj2.json');
-  })
-  .then(function(data){
-    console.log(data);
-  });
+	.then(function(){
+		return cache.get('sampleObj2.json');
+	})
+	.then(function(data){
+		console.log(data);
+	});
 
 cache.remove('sampleObj2.json').then(function(){
-  console.log('done');
+	console.log('done');
 });
 ```
 
