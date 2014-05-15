@@ -37,7 +37,7 @@ params:
 
 Sync:
 
-```
+```javascript
 var cache = new Cache();
 var sampleObj = {
 		prop: 'val'
