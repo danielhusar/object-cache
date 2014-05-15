@@ -8,7 +8,7 @@ Download [manually](https://github.com/danielhusar/object-cache) or with a packa
 
 #### [npm](https://npmjs.org/package/is-html)
 
-```
+```bash
 npm install --save object-cache
 ```
 
@@ -18,13 +18,13 @@ npm install --save object-cache
 
 #### Node.js
 
-```
+```javascript
 var cache = new Cache(params);
 ```
 
 params:
 
-```
+```javascript
 {
 		folder: './cache',
 		async: false,
@@ -50,7 +50,7 @@ cache.remove('sampleObj.json');
 
 Async with callback:
 
-```
+```javascript
 var cache = new Cache({
 	async: true
 });
@@ -73,7 +73,7 @@ cache.remove('sampleObj.json', function(err, success){
 
 Async with promises:
 
-```
+```javascript
 var cache = new Cache({
 	async: true
 });
